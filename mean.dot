@@ -1,0 +1,13 @@
+strict digraph  {
+0 [color=black, fillcolor="#FFFFa0", label="(256, 256)
+LoadOps.CUSTOM
+K:0 b:0", style="filled,bold"];
+1 [color=black, fillcolor="#c0c0c0", label="(256, 256)
+BinaryOps.ADD
+K:1 b:2", shape=box, style="filled,bold"];
+2 [color=black, fillcolor="#FFFFa0", label="(256, 256)
+LoadOps.CUSTOM
+K:0 b:1", style="filled,bold"];
+0 -> 1  [color="#a0a0a0"];
+2 -> 1  [color="#a0a0a0"];
+}

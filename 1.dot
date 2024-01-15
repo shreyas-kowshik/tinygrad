@@ -1,0 +1,54 @@
+strict digraph  {
+0 [color=black, fillcolor="#80ff8080", label="()\n()", style="filled,dashed"];
+1 [color=black, fillcolor="#FFA0A080", label="{(1024, 4)}
+(1, 1)
+ReduceOps.SUM", style="filled,dashed"];
+2 [color=black, fillcolor="#80ff8080", label="(1024, 4)\n(4, 1)", style="filled,dashed"];
+3 [color=black, fillcolor="#FFA0A0", label="{(1024, 4, 256)}
+(1024, 4, 1)
+ReduceOps.SUM
+K:2 b:3", style="filled,bold"];
+4 [color=black, fillcolor="#80ff8080", label="(1024, 4, 256)\n(1024, 256, 1)", style="filled,dashed"];
+5 [color=black, fillcolor="#c0c0c0", label="(1024, 1024)
+BinaryOps.SUB
+K:1 b:2", style="filled,bold"];
+6 [color=black, fillcolor="#80ff8080", label="(1024, 1024)\n(1024, 1)", style="filled,dashed"];
+7 [color=black, fillcolor="#FFA0A080", label="{(1024, 1024, 1024)}
+(1024, 1024, 1)
+ReduceOps.SUM", style="filled,dashed"];
+9 [color=black, fillcolor="#80ff8080", label="(1024, 1024, 1024)\n(1024, 0, 1)", style="filled,dashed"];
+10 [color=black, fillcolor="#FFFFa0", label="(1024, 1024)
+LoadOps.CUSTOM
+K:0 b:0", style="filled,bold"];
+8 [color=black, fillcolor="#c0c0c080", label="(1024, 1024, 1024)
+BinaryOps.MUL", style="filled,dashed"];
+11 [color=black, fillcolor="#80ff8080", label="(1024, 1024, 1024)\n(0, 1, 1024)", style="filled,dashed"];
+12 [color=black, fillcolor="#FFFFa0", label="(1024, 1024)
+LoadOps.CUSTOM
+K:0 b:1", style="filled,bold"];
+13 [color=black, fillcolor="#c0c0c080", label="(1024, 1024)
+BinaryOps.MUL", style="filled,dashed"];
+14 [color=black, fillcolor="#c0c0c0", label="()
+BinaryOps.MUL
+K:3 b:4", shape=box, style="filled,bold"];
+15 [color=black, fillcolor="#FFFFa080", label="()
+LoadOps.CONST
+9.5367431640625e-07", style="filled,dashed"];
+0 -> 14  [color="#a0a0a0"];
+1 -> 0  [color="#00000060"];
+2 -> 1  [color="#a0a0a0"];
+3 -> 2  [color="#00000060"];
+4 -> 3  [color="#a0a0a0"];
+5 -> 4  [color="#00000060"];
+6 -> 5  [color="#a0a0a0"];
+7 -> 6  [color="#00000060"];
+9 -> 8  [color="#a0a0a0"];
+10 -> 9  [color="#00000060"];
+10 -> 13  [color="#a0a0a0"];
+8 -> 7  [color="#a0a0a0"];
+11 -> 8  [color="#a0a0a0"];
+12 -> 11  [color="#00000060"];
+12 -> 13  [color="#a0a0a0"];
+13 -> 5  [color="#a0a0a0"];
+15 -> 14  [color="#a0a0a0"];
+}

@@ -30,7 +30,7 @@ def init_graph():
   atexit.register(save_graph_exit)
 
 counts: DefaultDict[type, int] = defaultdict(int)
-def nm(x):
+def nm(x): # COMMENT: Maps lazybuffer object to graph node
   if not hasattr(x, 'node_id'):
     setattr(x, 'node_id', counts[type(x)])
     counts[type(x)] += 1

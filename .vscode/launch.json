@@ -12,6 +12,15 @@
             "env": {"CLANG":"1"}, // for environment variables
             // "args": ["CLANG=1"] // for arguments
             "console": "integratedTerminal"
+        },
+        {
+            "name": "README Example pg/readme_example.py debug",
+            "type": "python",
+            "request": "launch",
+            "program": "pg/readme_example.py",
+            "env": {"CLANG":"1", "GRAPH":"1", "GRAPHPATH":"mean", "OPT":"1", "GRAPHUOPS":"1", "DEBUG":"5"},   // for environment variables
+            // "args": ["CLANG=1"] // for arguments
+            "console": "integratedTerminal"
         }
     ]
 }

@@ -1,0 +1,21 @@
+strict digraph  {
+1 [color=black, fillcolor="#80ff8080", label="(1024, 1024, 1024)\n(1024, 0, 1)", style="filled,dashed"];
+2 [color=black, fillcolor="#FFFFa0", label="(1024, 1024)
+LoadOps.CUSTOM
+K:0 b:0", style="filled,bold"];
+0 [color=black, fillcolor="#c0c0c080", label="(1024, 1024, 1024)
+BinaryOps.MUL", style="filled,dashed"];
+3 [color=black, fillcolor="#80ff8080", label="(1024, 1024, 1024)\n(0, 1, 1024)", style="filled,dashed"];
+4 [color=black, fillcolor="#FFFFa0", label="(1024, 1024)
+LoadOps.CUSTOM
+K:0 b:1", style="filled,bold"];
+5 [color=black, fillcolor="#FFA0A0", label="{(1024, 1024, 1024)}
+(1024, 1024, 1)
+ReduceOps.SUM
+K:1 b:2", shape=box, style="filled,bold"];
+1 -> 0  [color="#a0a0a0"];
+2 -> 1  [color="#00000060"];
+0 -> 5  [color="#a0a0a0"];
+3 -> 0  [color="#a0a0a0"];
+4 -> 3  [color="#00000060"];
+}

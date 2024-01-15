@@ -1,0 +1,41 @@
+strict digraph  {
+0 [color=black, fillcolor="#80ff8080", label="(3, 3)\n(1, 3)", style="filled,dashed"];
+1 [color=black, fillcolor="#c0c0c080", label="(1, 3, 3)
+BinaryOps.MUL", style="filled,dashed"];
+2 [color=black, fillcolor="#80ff8080", label="(1, 3, 3)\n(0, 0, 1)", style="filled,dashed"];
+3 [color=black, fillcolor="#FFFFa0", label="(1, 3)
+LoadOps.COPY
+K:1 b:1", style="filled,bold"];
+4 [fillcolor="#f0c08080", label="device:CPU
+size:3
+dtype:dtypes.float
+b:0", style=filled];
+5 [color=black, fillcolor="#80ff8080", label="(1, 3, 3)\n(0, 0, 0)", style="filled,dashed"];
+6 [color=black, fillcolor="#FFFFa080", label="()
+LoadOps.CONST
+1.0", style="filled,dashed"];
+7 [color=black, fillcolor="#FFFFa0", label="(3, 3)
+LoadOps.CONTIGUOUS
+K:2 b:2", shape=box, style="filled,bold"];
+9 [color=black, fillcolor="#80ff8080", label="(1, 3, 3)\n(0, None, None)", style="filled,dashed"];
+10 [color=black, fillcolor="#FFFFa080", label="()
+LoadOps.CONST
+1.0", style="filled,dashed"];
+8 [color=black, fillcolor="#c0c0c080", label="(1, 3, 3)
+BinaryOps.MUL", style="filled,dashed"];
+11 [color=black, fillcolor="#FFA0A0", label="{(1, 3, 3)}
+(1, 1, 3)
+ReduceOps.SUM
+K:3 b:3", shape=box, style="filled,bold"];
+0 -> 7  [color="#a0a0a0"];
+1 -> 0  [color="#00000060"];
+2 -> 1  [color="#a0a0a0"];
+3 -> 2  [color="#00000060"];
+4 -> 3  [color="#a0a0a0"];
+5 -> 1  [color="#a0a0a0"];
+5 -> 8  [color="#a0a0a0"];
+6 -> 5  [color="#00000060"];
+9 -> 8  [color="#a0a0a0"];
+10 -> 9  [color="#00000060"];
+8 -> 11  [color="#a0a0a0"];
+}
